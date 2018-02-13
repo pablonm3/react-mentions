@@ -310,7 +310,10 @@ class MentionsInput extends React.Component {
     // let handleChange = this.getOnChange(this.props) || emptyFunction;
     let eventMock = { target: { value: newValue } }
     // this.props.onChange.call(this, eventMock, newValue, newPlainTextValue, mentions);
-    this.executeOnChange(eventMock, newValue, newPlainTextValue, mentions)
+    setTimeout(() => {
+      this.executeOnChange(eventMock, newValue, newPlainTextValue, mentions)
+  
+    }, 200);
   }
 
   // Handle input element's select event
